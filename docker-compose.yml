@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+ postgres:
+  image: postgres # hub.docker se ayega
+  ports:
+    - "5432:5432" # port mapping of this postgres container
+  environment:
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: review
+    POSTGRES_DB: password
+ redis:
+  image: redis
+  ports: # port mapping of this redis container
+    - "6379:6379"
